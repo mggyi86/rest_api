@@ -79,7 +79,7 @@ class Handler extends ExceptionHandler
             return $this->errorResponse('The specified URL cannot be found', 404);
         }
         if($exception instanceof HttpException) {
-            return $this->errorResponse($exception->getMessage(), $exception->getStatusCoe());
+            return $this->errorResponse($exception->getMessage(), $exception->getStatusCode());
         }
         if($exception instanceof QueryException) {
             $errorCode = $exception->errorInfo[1];

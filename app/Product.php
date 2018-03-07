@@ -17,6 +17,9 @@ class Product extends Model
 
     protected $dates = ['deleted_at'];
     protected $fillable = ['name', 'description', 'quantity', 'status', 'image', 'seller_id'];
+    protected $hidden = [
+        'pivot'
+    ];
 
     public function isAvailable()
     {
