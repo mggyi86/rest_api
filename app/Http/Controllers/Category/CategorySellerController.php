@@ -21,7 +21,7 @@ class CategorySellerController extends APiController
             ->pluck('seller')
             ->unique()
             ->values();
-        return response()->json([ "data"   =>   $sellers ], 200);
-        // return $this->showAll($sellers);
+        // return response()->json([ "data"   =>   $sellers ], 200);
+        return $this->showAll($sellers);
     }
 }

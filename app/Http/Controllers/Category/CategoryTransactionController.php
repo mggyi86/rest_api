@@ -21,7 +21,7 @@ class CategoryTransactionController extends ApiController
             ->get()
             ->pluck('transactions')
             ->collapse();
-        return response()->json([ "data"    =>  $transactions ], 200);
-        // return $this->showAll($transactions);
+        // return response()->json([ "data"    =>  $transactions ], 200);
+        return $this->showAll($transactions);
     }
 }

@@ -24,8 +24,8 @@ class SellerCategoryController extends ApiController
             ->unique('id')
             ->values();
 
-    return response()->json([ "data"    => $categories ], 200);
-    // return $this->showAll($categories);
+    // return response()->json([ "data"    => $categories ], 200);
+    return $this->showAll($categories);
 
     }
 }

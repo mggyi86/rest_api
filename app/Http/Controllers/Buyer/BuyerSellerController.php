@@ -20,7 +20,7 @@ class BuyerSellerController extends ApiController
             ->pluck('product.seller')
             ->unique('id')
             ->values();
-        return response()->json([ "data" => $sellers ], 200);
-        // return $this->showAll($sellers);
+        // return response()->json([ "data" => $sellers ], 200);
+        return $this->showAll($sellers);
     }
 }

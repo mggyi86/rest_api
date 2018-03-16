@@ -25,7 +25,7 @@ class SellerBuyerController extends ApiController
             ->unique('id')
             ->values();
 
-        return response()->json([ "data"  =>  $buyers ], 200);
-        // return $this->showAll($buyers);
+        // return response()->json([ "data"  =>  $buyers ], 200);
+        return $this->showAll($buyers);
     }
 }

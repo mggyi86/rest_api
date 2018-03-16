@@ -24,7 +24,7 @@ class CategoryBuyerController extends ApiController
             ->pluck('buyer')
             ->unique('id')
             ->values();
-        return response()->json([ "data"   =>  $buyers ], 200);
+        // return response()->json([ "data"   =>  $buyers ], 200);
         return $this->showAll($buyers);
     }
 }
